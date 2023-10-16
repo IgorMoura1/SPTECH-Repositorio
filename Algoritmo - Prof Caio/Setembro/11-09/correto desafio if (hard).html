@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1_2</title>
+</head>
+
+<body>
+    Digite abaixo as entradas para a Nave Rocket <br> <br>
+    Digite a entrada X 0:
+    <input id="rocketEntrada_X_0"> <br>
+    Digite a entrada Y 0:
+    <input id="rocketEntrada_Y_0"> <br>
+    Digite a entrada X 1:
+    <input id="rocketEntrada_X_1"> <br>
+    Digite a entrada Y 1:
+    <input id="rocketEntrada_Y_1"> <br> <br>
+
+    Digite abaixo as entradas para a Nave Space <br> <br>
+
+    Digite a entrada X 0:
+    <input id="spaceEntrada_x_0"> <br>
+    Digite a entrada Y 0:
+    <input id="spaceEntrada_y_0"> <br>
+    Digite a entrada X 1:
+    <input id="spaceEntrada_x_1"> <br>
+    Digite a entrada Y 1:
+    <input id="spaceEntrada_y_1"> <br> <br>
+
+    <button onclick="calcularSaida()">
+        calcularSaida
+
+    </button>
+
+    <div id="saida_Resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function calcularSaida() {
+        var R1x0 = Number(rocketEntrada_X_0.value)
+        var R1y0 = Number(rocketEntrada_Y_0.value)
+        var R1x1 = Number(rocketEntrada_X_1.value)
+        var R1y1 = Number(rocketEntrada_Y_1.value)
+
+        var R2x0 = Number(spaceEntrada_x_0.value)
+        var R2y0 = Number(spaceEntrada_y_0.value)
+        var R2x1 = Number(spaceEntrada_x_1.value)
+        var R2y1 = Number(spaceEntrada_y_1.value)
+
+        if (R2x0 <= R1x1) {
+            if (R2x0 <= R1y1) {
+                if (R1x0 <= R2y0) {
+                    if (R1y0 <= R2y1) {
+                        saida_Resultado.innerHTML= `Nave colide! Cuidado`
+                    }
+                    else saida_Resultado.innerHTML = `Não colide`
+                }
+                else saida_Resultado.innerHTML =  `Não colide`
+            }
+            else saida_Resultado.innerHTML =  `Não colide`
+        }
+        else saida_Resultado.innerHTML = `Não colide`
+        }
+</script>

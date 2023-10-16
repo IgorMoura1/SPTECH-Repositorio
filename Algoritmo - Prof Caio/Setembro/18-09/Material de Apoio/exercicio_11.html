@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Quantidade de passagens que deseja adquirir:
+    <input id="input_qtd_passagens" /><br />
+    <button onclick="comprar()">Comprar</button>
+    <b id="b_resultado"></b>
+  </body>
+</html>
+<script>
+  function comprar() {
+    var qtdPassagens = Number(input_qtd_passagens.value);
+
+    // if (qtdPassagens >= 8 && qtdPassagens <= 19) {
+        // DESCONTO 3%
+    // } else if (qtdPassagens >= 20 && qtdPassagens <= 49) {
+        // DESCONTO 5%
+    // } else if (qtdPassagens == 50) {
+        // DESCONTO 7%
+    // } else {
+    //     // INCORRETO
+    // }
+
+    if (qtdPassagens >= 8 && qtdPassagens <= 50) {
+      var gastoViagemBase = qtdPassagens * 4.4;
+
+      if (qtdPassagens <= 19) {
+        // gastoViagemBase = gastoViagemBase * 0.97;
+        gastoViagemBase -= gastoViagemBase * 0.03;
+      } else if (qtdPassagens <= 49) {
+        // gastoViagemBase = gastoViagemBase * 0.95;
+        gastoViagemBase *= 0.95;
+      } else {
+        gastoViagemBase = gastoViagemBase * 0.93;
+      }
+
+      b_resultado.innerHTML = `Total a pagar: R$${gastoViagemBase}`;
+    } else {
+      alert("Quantidade inválida para o Fidelidade!");
+    }
+  }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    Quantas latinhas de refrigerante você toma por dia: <br>
+    <input id="qtdLatinhaspd"> <br>
+
+    <button onclick="mostrarRefri()">
+        Quantos refris?
+    </button>
+
+    <div id="qtdRefri">
+    </div>
+</body>
+</html>
+
+<script>
+    function mostrarRefri() {
+        var refriLata = Number(qtdLatinhaspd.value);
+        var lataAno = Number(refriLata * 365);
+        qtdRefri.innerHTML = `${refriLata * 365}`;
+       
+        if (lataAno >= 500) {
+            qtdRefri.innerHTML = `
+            ${lataAno} <br> cuidado com a diabetes!`
+        }
+    }
+</script>

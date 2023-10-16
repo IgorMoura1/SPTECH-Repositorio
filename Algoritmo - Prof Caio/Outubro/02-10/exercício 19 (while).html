@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    quantas xícaras de café com leite você já tomou na vida ?
+    <input id="qtdXicara">
+
+    <button onclick="fazerCalculo()">
+        Ver a quantidade
+    </button>
+
+    <div id="mostrarResultado"></div>
+</body>
+
+</html>
+
+<script>
+    function fazerCalculo() {
+        var numero = 1;
+        var qtdLeite = Number(qtdXicara.value) * 2;
+        var qtdCafe = qtdLeite;
+        var numeroCafe = 1
+        mostrarResultado.innerHTML = ``;
+
+        while (numero <= qtdLeite) {
+            mostrarResultado.innerHTML += `<img src="https://img2.gratispng.com/20180214/bze/kisspng-wooden-spoon-milk-vector-brown-wooden-milk-spoon-png-5a8460d87ab011.2257028215186249845025.jpg">`;
+            numero += 2;
+        }
+        while (numeroCafe <= qtdCafe) {
+            mostrarResultado.innerHTML += `<img src="https://img.freepik.com/fotos-premium/cafe-em-po-na-colher-de-madeira-em-branco_253984-1697.jpg">`;
+            numeroCafe += 1
+        }
+
+    }
+</script>

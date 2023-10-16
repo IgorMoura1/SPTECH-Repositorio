@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    Digite seu nome <br>
+    <input id="nome_usuario"> <br> <br>
+    Digite sua idade <br>
+    <input id="idade_usuario"> <br> <br>
+
+    <button onclick="mostrarMensagem()">
+        Avaliar aluno
+    </button>
+</body>
+</html>
+
+<script>
+    function mostrarMensagem() {
+        var nome = nome_usuario.value;
+        var idade = Number(idade_usuario.value);
+
+        if (idade >= 18) {
+            alert(`${nome} já pode tirar sua CNH!`);}
+        else {
+            alert(`${nome} vai jogar PlayStation!`)
+        
+
+
+        }
+
+        }
+
+    
+</script>

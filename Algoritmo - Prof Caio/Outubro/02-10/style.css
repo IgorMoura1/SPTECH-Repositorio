@@ -1,0 +1,11 @@
+#mostrarResultado {
+    display: flex;
+    width: 100px;
+    height: 200px;
+    flex-direction: row;
+}
+
+#script img {
+    width: 20px;
+    height: 20px;
+}

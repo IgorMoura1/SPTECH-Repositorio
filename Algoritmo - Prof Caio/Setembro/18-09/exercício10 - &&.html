@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+    Insira aqui sua idade: <br>
+    <input id="input_idade"> <br> <br>
+    Insira aqui seu salário: <br>
+    <input id="input_salario"> <br> <br>
+
+    <button onclick="avaliarFinanca()">
+        Avaliar altura
+    </button>
+
+    <div id="mostrarResultado"></div>
+
+</body>
+
+</html>
+<script>
+    function avaliarFinanca() {
+        var idade = Number(input_idade.value)
+        var salario = Number(input_salario.value)
+
+        if (idade < 18 && salario < 2500){
+            mostrarResultado.innerHTML = `Menor de idade e liso`
+        } else if (idade < 18 && salario >= 2500){
+            mostrarResultado.innerHTML = `Menor de idade e ostentação`
+        } else if (idade >= 18 && salario < 3500){
+            mostrarResultado.innerHTML = `Maior de idade e liso`
+        } else if (idade >= 18 && salario >= 3500 && salario <= 7000) {
+            mostrarResultado.innerHTML = `Maior de idade e ostentação`
+        } else if (idade >= 18 && salario > 7000) {
+            mostrarResultado.innerHTML = `Maior de idade e mega ostentação`
+        }
+    }
+</script>

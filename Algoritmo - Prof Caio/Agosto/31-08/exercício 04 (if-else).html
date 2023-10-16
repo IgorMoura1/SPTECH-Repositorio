@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    Insira a sua frequencia: <br>
+    <input id="freqAluno">
+
+    <button onclick="calcularFreq()">
+        Analisar frequência
+    </button> <br><br>
+
+    <div id="mostrarImagem">
+        
+
+    </div>
+</body>
+</html>
+<script>
+function calcularFreq() {
+    var frequencia = Number(freqAluno.value)
+
+    if (frequencia < 50){
+        mostrarImagem.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/925/925568.png">`}
+        else { mostrarImagem.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/3655/3655547.png">`}
+
+
+    }
+</script>

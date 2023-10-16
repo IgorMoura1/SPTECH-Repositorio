@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        Número de depósitos:
+        <input type="number" id="depositos"> <br><br>
+
+        Valor do depósito:
+        <input type="number" id="deposito"> <br><br>
+
+        <button onclick="calcularDepositos()">
+            Acompanhar grana
+        </button>
+
+        <div id="finalResultado"></div>
+    </div>
+    <div id="resultadoFinal"></div>
+    <script>
+        function calcularDepositos() {
+            var depositoValor = Number(deposito.value)
+            var depositoQtd = Number(depositos.value)
+            var numero = 1;
+            var valorQtd = 0
+            finalResultado.innerHTML = ``
+            while (numero <= depositoQtd) {
+                var valorQtd = valorQtd + depositoValor
+                if (numero % 3 == 0) {
+                    var valorQtd = (valorQtd*0.01) + valorQtd
+                    finalResultado.innerHTML += `${numero}º Mês: R$ ${valorQtd} <img src="https://media.tenor.com/pXEDrZV2s4QAAAAj/star-spinning.gif" width="15px" height="15px"> <br>`
+                } else finalResultado.innerHTML += `${numero}º Mês: R$ ${valorQtd}<br>`
+                numero += 1
+            }
+            resultadoFinal.innerHTML = `Total guardado: R$${valorQtd}`
+        }
+    </script>
+</body>
+
+</html>

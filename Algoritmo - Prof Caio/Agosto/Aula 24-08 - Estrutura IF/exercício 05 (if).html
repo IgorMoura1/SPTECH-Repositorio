@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    Insira a quantidade de KWh consumida no mês: <br>
+    <input id="qtdKWh"> <br><br>
+    <button onclick="calcularConta()">
+        Calcular conta de luz
+    </button>
+
+    <div id="contadeLuz">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcularConta() {
+        var KWh = Number(qtdKWh.value)
+        var consumoKWh = (KWh * 0.85)
+        
+        if (KWh < 100) 
+        alert(`Com desconto, sua conta de luz ficou R$${consumoKWh - (consumoKWh * 0.10)}`)
+
+        if (KWh >= 100) 
+        alert(`Sua conta de luz ficou R$${consumoKWh}`)
+        }
+
+</script>

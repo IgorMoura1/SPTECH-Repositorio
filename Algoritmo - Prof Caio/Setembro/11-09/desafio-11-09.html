@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1_1</title>
+</head>
+
+<body>
+    Digite abaixo as entradas para a Nave Rocket <br> <br>
+    Digite a entrada Y 1:
+    <input id="rocketEntrada_y_1"> <br>
+    Digite a entrada Y 2:
+    <input id="rocketEntrada_y_2"> <br>
+    Digite a entrada X 1:
+    <input id="rocketEntrada_x_1"> <br>
+    Digite a entrada X 2:
+    <input id="rocketEntrada_x_2"> <br> <br>
+
+    Digite abaixo as entradas para a Nave Space <br> <br>
+
+    Digite a entrada Y 1:
+    <input id="spaceEntrada_y_1"> <br>
+    Digite a entrada Y 2:
+    <input id="spaceEntrada_y_2"> <br>
+    Digite a entrada X 1:
+    <input id="spaceEntrada_x_1"> <br>
+    Digite a entrada X 2:
+    <input id="spaceEntrada_x_2"> <br> <br>
+
+    <button onclick="calcularSaida()">
+        calcularSaida
+
+    </button>
+
+    <div id="saida_Resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function calcularSaida() {
+        var naveRocketY1 = Number(rocketEntrada_y_1.value)
+        var naveRocketY2 = Number(rocketEntrada_y_2.value)
+        var naveRocketX1 = Number(rocketEntrada_x_1.value)
+        var naveRocketX2 = Number(rocketEntrada_x_2.value)
+
+        var naveSpaceY1 = Number(spaceEntrada_y_1.value)
+        var naveSpaceY2 = Number(spaceEntrada_y_2.value)
+        var naveSpaceX1 = Number(spaceEntrada_x_1.value)
+        var naveSpaceX2 = Number(spaceEntrada_x_2.value)
+        var colisao = ""
+
+        if (naveRocketY1 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceX2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+
+        if (naveRocketY2 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY2 == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY2 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY2 == naveSpaceX2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`   
+        }
+
+        if ((naveRocketY1 + 1) == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketY1 + 1) == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketX1 + 1) == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketX2 + 1) == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketY1 - 1) == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketY1 - 1) == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketX1 - 1) == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if ((naveRocketX2 - 1) == naveSpaceY2) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        else
+        {saida_Resultado.innerHTML = `Não colide!`}
+    }
+        
+
+
+    
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+    Digite o inicio do intervalo aqui: <br>
+    <input id="intervaloInicio"> <br> <br>
+
+    Digite o fim do intevalo aqui <br>
+    <input id="intervaloFim"> <br> <br>
+
+    <button onclick="mostrarResultado()">
+        S2 Pares!</button>
+
+    <div id="mostrar"></div>
+</body>
+
+</html>
+
+<script>
+    function mostrarResultado() {
+        var inicio = Number(intervaloInicio.value)
+        var fim = Number(intervaloFim.value)
+        var numero = 0
+        mostrar.innerHTML = ``;
+        if (inicio <= fim) {
+            while (inicio <= fim) {
+                if (inicio % 2 == 0) {
+                    mostrar.innerHTML += `${inicio}<br>`;
+                }
+                inicio += 1
+            }
+        } else { alert(`Esse intervalo não é crescente!`) }
+    }
+</script>

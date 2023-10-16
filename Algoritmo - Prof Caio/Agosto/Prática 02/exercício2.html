@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    Digite seu peso (kg) <br>
+    <input type="Number" 
+    id="input_peso"> <br>
+        <br>
+    Digite sua altura (cm) <br>
+    <input type="Number" 
+    id="input_altura"> <br>
+        <br>
+    <button onclick="FalarComUsuario()">
+        Fale comigo
+    </button>
+    
+    
+</body>
+</html>
+
+<script> 
+    function FalarComUsuario() {
+    var usuarioPeso = input_peso.value
+    var usuarioAltura = input_altura.value
+    alert(`Você pesa ${usuarioPeso}kg e tem ${usuarioAltura / 100}m de altura
+    `)}
+</script>

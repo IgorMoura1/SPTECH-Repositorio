@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+</head>
+
+<body>
+    Digite sua idade:
+    <input id="idade" onkeyup="faseVida()">
+    <div id="resultado"></div>
+
+    <script>
+        function faseVida() {
+            var idadeUsu = Number(idade.value);
+            var fase = "";
+            var numero = 1;
+            var valorIdade = 1;
+            resultado.innerHTML = ``
+
+            while (numero <= idadeUsu) {
+                if (valorIdade >= 0 && valorIdade <= 4) {
+                    fase = "Primeira Infancia";
+                } else if (valorIdade >= 5 && valorIdade <= 6) {
+                    fase = "Pre-escolar";
+                } else if (valorIdade >= 7 && valorIdade <= 10) {
+                    fase = "Segunda Infancia";
+                } else if (valorIdade >= 11 && valorIdade <= 18) {
+                    fase = "Adolescencia";
+                } else if (valorIdade >= 19 && valorIdade <= 50) {
+                    fase = "Adulto";
+                } else if (valorIdade >= 51 && valorIdade <= 100) {
+                    fase = "Melhor idade";
+                } else if (valorIdade > 100) {
+                    fase = "Matusalem";
+                }
+
+                resultado.innerHTML += `${numero} anos (${fase})<br>`
+                valorIdade += 1;
+                numero += 1
+            }
+        }
+    </script>
+</body>
+
+</html>

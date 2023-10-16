@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17</title>
+</head>
+
+<body>
+    Quantas pessoas vão entrar no carro?
+    <input id="qtdPessoas">
+
+    Qual a capacidade do carro?
+    <input id="qtdCarro">
+
+    <button onclick="mostrarCalculo()">
+        "#Partiu Carona
+    </button>
+
+    <div id="mostrarResultado">
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+    function mostrarCalculo() {
+        var pessoas = Number(qtdPessoas.value)
+        var numero = 1;
+        var carro = Number(qtdCarro.value)
+        mostrarResultado.innerHTML = ``
+
+        while (numero < pessoas) {
+            numero++
+            if (carro < numero) {
+                mostrarResultado.innerHTML += `O ${numero}º vai ter que esperar. <br>`
+            }
+        }
+    }
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    Qual tabuada deseja ver? <br>
+    <input id="primeiroNumero"> <br> <br>
+
+    Até que número a tabuada deve ser construída? <br>
+    <input id="final"> <br> <br>
+
+    <button onclick="realizarTabuada()">
+        Ver Tabuada</button>
+
+    <div id="mostrarResultado">
+    </div>
+
+    <p>
+
+</body>
+
+</html>
+
+<script>
+    function realizarTabuada() {
+        var primeiroNum = Number(primeiroNumero.value);
+        var segundoNum = Number(final.value);
+        var numero = 1;
+        mostrarResultado.innerHTML = ``
+
+        while (segundoNum >= numero) {
+
+            if (numero % 2 == 0) {
+                mostrarResultado.innerHTML += `<p style='color: blue;'> ${primeiroNum}x${numero}=${primeiroNum * numero}</p>`}
+
+                else { mostrarResultado.innerHTML += `<p style='color: red;'> ${primeiroNum}x${numero}=${primeiroNum * numero}</p>` }
+                numero += 1
+            }
+        }
+    
+
+
+</script>

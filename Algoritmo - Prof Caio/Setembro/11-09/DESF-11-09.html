@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1_2</title>
+</head>
+
+<body>
+    Digite abaixo as entradas para a Nave Rocket <br> <br>
+    Digite a entrada X 0:
+    <input id="rocketEntrada_X_0"> <br>
+    Digite a entrada Y 0:
+    <input id="rocketEntrada_Y_0"> <br>
+    Digite a entrada X 1:
+    <input id="rocketEntrada_X_1"> <br>
+    Digite a entrada Y 1:
+    <input id="rocketEntrada_Y_1"> <br> <br>
+
+    Digite abaixo as entradas para a Nave Space <br> <br>
+
+    Digite a entrada X 0:
+    <input id="spaceEntrada_x_0"> <br>
+    Digite a entrada Y 0:
+    <input id="spaceEntrada_y_0"> <br>
+    Digite a entrada X 1:
+    <input id="spaceEntrada_x_1"> <br>
+    Digite a entrada Y 1:
+    <input id="spaceEntrada_y_1"> <br> <br>
+
+    <button onclick="calcularSaida()">
+        calcularSaida
+
+    </button>
+
+    <div id="saida_Resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function calcularSaida() {
+        var naveRocketX0 = Number(rocketEntrada_X_0.value)
+        var naveRocketY0 = Number(rocketEntrada_Y_0.value)
+        var naveRocketX1 = Number(rocketEntrada_X_1.value)
+        var naveRocketY1 = Number(rocketEntrada_Y_1.value)
+
+        var naveSpaceX0 = Number(spaceEntrada_x_0.value)
+        var naveSpaceY0 = Number(spaceEntrada_y_0.value)
+        var naveSpaceX1 = Number(spaceEntrada_x_1.value)
+        var naveSpaceY1 = Number(spaceEntrada_y_1.value)
+
+        var naveRocketX0positivo = naveRocketX0 + 1
+        var naveRocketY0positivo = naveRocketX0 + 1
+        var naveRocketX1positivo = naveRocketX0 + 1
+        var naveRocketY1positivo = naveRocketX0 + 1
+
+        var naveRocketX0negativo = naveRocketX0 - 1
+        var naveRocketY0negativo = naveRocketX0 - 1
+        var naveRocketX1negativo = naveRocketX0 - 1
+        var naveRocketY1negativo = naveRocketX0 - 1
+
+        var numero = 1
+        var colisao = ""
+
+        if (naveRocketX0 == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0 == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketX1 == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1 == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY0 == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0 == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY1 == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1 == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+
+
+        if (naveRocketX0positivo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0positivo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0positivo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0positivo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketX1positivo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1positivo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1positivo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1positivo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY0positivo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0positivo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0positivo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0positivo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY1positivo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1positivo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1positivo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1positivo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+
+
+        if (naveRocketX0negativo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0negativo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0negativo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX0negativo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketX1negativo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1negativo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1negativo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketX1negativo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY0negativo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0negativo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0negativo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY0negativo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+
+        if (naveRocketY1negativo == naveSpaceX0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1negativo == naveSpaceY0) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1negativo == naveSpaceX1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        if (naveRocketY1negativo == naveSpaceY1) {
+            saida_Resultado.innerHTML = `Nave colide! Cuidado`
+        }
+        else saida_Resultado.innerHTML = `Não colide!`
+    }
+</script>

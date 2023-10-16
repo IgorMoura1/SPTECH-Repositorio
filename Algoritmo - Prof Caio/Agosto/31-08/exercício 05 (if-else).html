@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    Insira sua primeira nota: <br>
+    <input id="notaPrimeira"> <br><br>
+    Insira sua segunda nota: <br>
+    <input id="notaSegunda">
+
+    <button onclick="calcularNota()">
+        Verificar situação
+    </button> <br><br>
+
+    <div id="notaMensagem">
+        
+
+    </div>
+</body>
+</html>
+<script>
+function calcularNota() {
+    var nota1 = Number(notaPrimeira.value)
+    var nota2 = Number(notaSegunda.value)
+    var notafinal = (nota1 + nota2) / 2 
+
+    if (notafinal >= 6){
+        notaMensagem.innerHTML = `Parabéns, aprovado!`}
+        else {notaMensagem.innerHTML = `Tente outra vez...`}
+
+}
+</script>

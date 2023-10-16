@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    Insira os dados pedidos abaixo <br>
+    <br>
+    Quantidade de votos que o "Candidato A" teve na eleição; <br>   
+    <input type="number" id="input_candidato_A"> <br> <br>
+    Quantidade de votos que o "Candidato B" teve na eleição; <br>
+    <input type="number" id="input_candidato_B"> <br> <br>
+    Quantidade de votos brancos que houveram na eleição; <br>   
+    <input type="number" id="input_brancos"> <br> <br>
+    Quantidade de votos votos nulos que houveram na eleição; <br>
+    <input type="number" id="input_nulos"> <br> <br>
+    <button onclick="mostraResultado()">
+        Resultado da Eleição 
+    </button>   
+        <div id="div_eleicao">
+        </div> 
+    </body>
+    </html>
+    <script>
+        function mostraResultado() {
+            var qtdVotosA = Number(input_candidato_A.value)
+            var qtdVotosB = Number(input_candidato_B.value)
+            var qtdVotosBranco = Number(input_brancos.value)
+            var qtdVotosNulos = Number(input_nulos.value)
+            var total = Number(qtdVotosA + qtdVotosB + qtdVotosBranco + qtdVotosNulos)
+            div_eleicao.innerHTML = `
+            Total de votos: <u>${total}</u>
+            Candidato A: ${qtdVotosA / total * 100}% (${qtdVotosA} votos) 
+            Candidato B: ${qtdVotosB / total * 100}% (${qtdVotosB} votos)
+            Inválidos: ${((qtdVotosBranco + qtdVotosNulos) * 100) / total}% (${qtdVotosBranco + qtdVotosNulos} votos)
+            `
+        }   
+    </script>

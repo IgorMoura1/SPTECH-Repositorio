@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Número máximo:
+    <input id="input_numero_maximo" /><br />
+    <button onclick="verMultiplosCinco()">Adoro múltiplos de 5</button>
+    <div id="div_multiplos"></div>
+  </body>
+</html>
+<script>
+  function verMultiplosCinco() {
+    // var numeroMaximo = Number(input_numero_maximo.value) / 5;
+    // var numero = 0;
+    // div_multiplos.innerHTML = "";
+    // while (numero <= numeroMaximo) {
+    //     div_multiplos.innerHTML += `${numero*5}<br>`;
+    //     numero += 1;
+    // }
+
+    // var numeroMaximo = Number(input_numero_maximo.value);
+    // var numero = 0;
+    // div_multiplos.innerHTML = "";
+    // while (numero <= numeroMaximo) {
+    //     div_multiplos.innerHTML += `${numero}<br>`;
+    //     numero += 5;
+    // }
+
+    // var numeroMaximo = Number(input_numero_maximo.value);
+    // var numero = 0;
+    // div_multiplos.innerHTML = "";
+    // while (numero <= numeroMaximo) {
+    //   var numeroEmTexto = numero + "";
+    //   if (numeroEmTexto.endsWith("0") || numeroEmTexto.endsWith("5")) {
+    //     div_multiplos.innerHTML += `${numero}<br>`;
+    //   }
+    //   numero += 1;
+    // }
+
+    var numeroMaximo = Number(input_numero_maximo.value);
+    var numero = 0;
+    div_multiplos.innerHTML = "";
+
+    while (numero <= numeroMaximo) {
+      // módulo - %
+      if (numero % 5 == 0) {
+        div_multiplos.innerHTML += `${numero}<br>`;
+      }
+      numero += 1;
+    }
+  }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+
+<body>
+    Coloque um número de 20 a 100: <br>
+    <input id="numInteiro"> <br> <br>
+
+    <button onclick="contagem()">
+        Adoro múltiplos de 5</button>
+
+    <div id="mostrarContagem"></div>
+</body>
+
+</html>
+
+<script>
+    function contagem() {
+        mostrarContagem.innerHTML = ``
+        var numero = 0
+        var repeticao = 1
+        var inteiro = Number(numInteiro.value)
+        
+        while (numero <= inteiro) {
+            mostrarContagem.innerHTML += `${numero} <br>`
+        numero += 5
+        repeticao += 1
+        }
+        
+        
+        
+    }
+</script>

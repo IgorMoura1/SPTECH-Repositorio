@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    Digite o time que você torce: <br>
+    <input type="text" id="timeUsuario"> <br> <br>
+    Coloque quantos mundiais seu time tem:  <br>
+    <input type="text" id="mundiaisUsuario"> <br> <br>
+    <button onclick="AmoMeuTime()"> 
+        Amo meu time
+    </button>
+</body>
+</html>
+<script>function AmoMeuTime() {
+    var timeTorce = timeUsuario.value
+    var timeMundiais = mundiaisUsuario.value
+    alert(`O time ${timeTorce} tem ${timeMundiais} mundiais da FIFA
+    `)}</script>

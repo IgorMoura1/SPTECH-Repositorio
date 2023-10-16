@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23</title>
+</head>
+
+<body>
+    Insira aqui o limite inferior: <br>
+    <input id="limiteInferior"> <br><br>
+    Insira aqui o limite superior: <br>
+    <input id="limiteSuperior"> <br><br>
+    Insira aqui o numero para efetuar a divisão: <br>
+    <input id="divisao"> <br><br>
+
+    <button onclick="calcular()">
+        Contar
+    </button>
+</body>
+
+<div id="mostrarMensagem">
+</div>
+
+<div id="mostrarResultado">
+</div>
+
+<div id="mostrarNumeros">
+
+</div>
+
+</html>
+
+<script>
+    function calcular() {
+        var inferior = Number(limiteInferior.value);
+        var superior = Number(limiteSuperior.value);
+        var divisibilidade = Number(divisao.value);
+        var numero = 0;
+        var numerototal = 0;
+        var somatotal = 0;
+        var media = 0;
+        var maiornumero = 0;
+        var menornumero = 0;
+        mostrarMensagem.innerHTML = ``
+
+        if (inferior < 1) {
+            mostrarMensagem.innerHTML += `Numero menor que 1, insira um número válido`;
+        }
+        else if (superior > 99) {
+            mostrarMensagem.innerHTML += `Numero maior que 99, insira um número válido`;
+        }
+        else if (divisibilidade < 3 || divisibilidade > 10) {
+            mostrarMensagem.innerHTML += `O número deve estar entre 3 e 10, insira um número válido`;
+        }
+        else if (inferior > superior) {
+            mostrarMensagem.innerHTML += `O número inferior é maior que o superior, insira um número válido`
+        } else {
+            while (inferior <= superior) {
+                if (inferior % divisibilidade == 0) {
+                    mostrarMensagem.innerHTML += `${inferior}, `
+                    numerototal++
+                    if (inferior % divisibilidade == 0) { 
+                        
+                        somatotal = inferior + somatotal
+                        media = somatotal / numerototal
+                        maiornumero = inferior
+                        menornumero = inferior
+                    }
+                }
+                inferior += 1
+            }
+        }
+        mostrarNumeros.innerHTML = `QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${numerototal} <br> 
+        SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${somatotal} <br>
+        MÉDIA DOS NÚMEROS EXIBIDOS: ${media} <br>
+        MAIOR NÚMERO EXIBIDO: ${maiornumero} <br>
+        MENOR NÚMERO EXIBIDO: ${menornumero}`
+    }
+</script>

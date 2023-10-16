@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+
+<body>
+    Insira a temperatura aqui: <br>
+    <input id="input_temp"> <br> <br>
+
+    <button onclick="mostrarTemp()">
+        Temperatura para o ser humano é
+    </button>
+
+    <div id="mostrarResultado">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function mostrarTemp() {
+        var temperatura = Number(input_temp.value)
+
+        if (temperatura <= 14) {
+            mostrarResultado.innerHTML = `Congelante`
+        } else if (temperatura <= 21) {
+            mostrarResultado.innerHTML = `Com frio`
+        } else if (temperatura <= 24) {
+            mostrarResultado.innerHTML = `Confortável`
+        } else if (temperatura <= 31) {
+            mostrarResultado.innerHTML = `Com calor`
+        } else mostrarResultado.innerHTML = `Calor escaldante`
+    }
+</script>

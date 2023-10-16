@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    Quantas Coca-Cola você acha que já bebeu na vida?
+    <input id="qtdRefri">
+
+
+
+    <button onclick="mostrarCalculo()">
+        Ver quantidade
+    </button> <br>
+
+    
+    <span id="mostrarResultado">
+    </span>
+    
+
+</body>
+
+</html>
+
+<script>
+    function mostrarCalculo() {
+        var numero = 1;
+        var coca = Number(qtdRefri.value)
+        mostrarResultado.innerHTML = ``
+
+        while (numero <= coca) {
+            mostrarResultado.innerHTML += `<img src="https://www.imagensempng.com.br/wp-content/uploads/2022/01/2442.png" alt="Uma lata de Coca-Cola">`
+        numero++
+        }
+
+}
+
+</script>

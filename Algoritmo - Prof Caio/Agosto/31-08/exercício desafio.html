@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+    Digite seu nome: <br>
+    <input id="input_nome"> <br> <br>
+    Digite o último reino que se aventurou: <br>
+    <input id="input_reino"> <br> <br>
+    Digite a sua idade: <br>
+    <input id="input_idade"> <br> <br>
+    Digite a quantidade inimigos derrotados: <br>
+    <input id="input_inimigos"> <br> <br>
+    Digite a quantidade de moedas que tem: <br>
+    <input id="input_moedas"> <br> <br>
+
+    <button onclick="IniciaraExploracao()">
+        Iniciar Exploração
+    </button>
+
+    <div id="fogo_reino">
+
+    </div>
+
+    <span id="span_gelado_reino">
+
+    </span>
+
+    <p id="geleca_reino">
+
+    </p>
+
+    <i id="coroco_reino">
+
+    </i>
+
+    <b id="vampiros_reino"></b>
+
+
+</body>
+
+</html>
+
+<script>
+    function IniciaraExploracao() {
+        var nome = input_nome.value
+        var ultimoreino = input_reino.value
+        var idade = Number(input_idade.value)
+        var inimigos = Number(input_inimigos)
+        var moedas = Number(input_moedas.value)
+        var proximoReino = ""
+        var moedasperdidas = ""
+        var moedasFinal = ""
+        var mensagem = ""
+
+        if (ultimoreino == "Doce") {
+            if (moedas > 80) {
+                if (idade >= 10) {
+                    var ganhoOuro = moedas * 0.08
+                    moedasFinal = moedas + (moedas * 0.08)
+                    fogo_reino.innerHTML = `Olá ${nome}, que bom te ver por aqui. Ao entrar no reino de fogo o seu dinheiro ganhará um acréscimo de 8% em moedas de ouro que será ${ganhoOuro} moedas, sendo assim o valor total do seu dinheiro agora será de ${moedasFinal} moedas`
+                    alert(`Tome cuidado para não se apaixonar pela princesa de fogo`)
+                } else {
+                    mensagem = `Você não pode ir para o reino de Fogo pois você está Muito Novo.`
+                }
+            } else {
+                mensagem = `Você não pode ir para o reino de Fogo pois você está Muito Pobre.`
+            }
+
+        }
+
+        else if (ultimoreino == "Fogo") {
+            if (moedas >= 500) {
+                if (idade < 14) {
+                    var perdaOuro = moedas * 0.13
+                    moedasFinal = moedas - perdaOuro
+                    span_gelado_reino.innerHTML = `Olá ${nome}, que bom te ver por aqui. Ao entrar no reino de gelo o seu dinheiro sofrerá uma perda de 13% em moedas de ouro que será ${perdaOuro} moedas, sendo assim o valor total do seu dinheiro agora será de ${moedasFinal} moedas`
+                    alert(`Dê um olá ao Gunter por ele ser um pinguim maneiro`)
+                } else {
+                    mensagem = `Você não pode ir para o reino de Fogo pois você está Muito Novo.`
+                }
+            } else {
+                mensagem = `Você não pode ir para o reino de Fogo pois você está Muito Pobre.`
+            }
+
+        }
+
+
+
+
+    }
+
+</script>

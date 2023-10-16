@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+
+
+<body>
+    Insira a quantidade de homens no elevador: <br>
+    <input id="homensElev"> <br><br>
+    Insira a quantidade de mulheres no elevador: <br>
+    <input id="mulheresElev"> <br><br>
+
+    <button onclick="elevadorBotao()">
+        Ligar elevador
+    </button> <br><br>
+
+    <div id="elevadorMensagem">
+    </div>
+
+</body>
+
+</html>
+<script>
+    function elevadorBotao() {
+        var homens = Number(homensElev.value)
+        var mulheres = Number(mulheresElev.value)
+        var pesomulheres = mulheres * 70
+        var pesohomens = homens * 90
+        var pesofinal = pesohomens + pesomulheres
+        var pesoperder = pesofinal - 500
+
+        if (pesofinal <= 500) {
+            elevadorMensagem.innerHTML = `<span style="color: green">Elevador vai se mover, pois está com ${pesofinal}kg</p>`
+        }
+        else {
+            
+            elevadorMensagem.innerHTML = `<span style="color: red">
+            Precisa perder ${pesoperder}kg para mover o elevador</p>`
+        }
+
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Marca da TV (dentre as opções "Samsung", "LG", "Mondial" e "Britânia")
+    <input id="input_marca_tv" /><br />
+    Solicite o preço da TV:
+    <input id="input_preco_tv" /><br />
+    <button onclick="analisarCompra()">Analisar compra</button>
+    <div id="div_frase"></div>
+  </body>
+</html>
+<script>
+  function analisarCompra() {
+    var marcaTv = input_marca_tv.value;
+    var precoTv = Number(input_preco_tv.value);
+
+    var mensagem = "TV fora da faixa de preço";
+    if (precoTv < 800) {
+      mensagem += `
+        <br>Preço baixo demais
+      `;
+    } else if (precoTv > 2000) {
+      mensagem += `
+        <br>TV cara demais, infelizmente.
+      `;
+    } else if (marcaTv == "Mondial" || marcaTv == "Britânia") {
+      mensagem = "Na faixa de preço porém marca não confiável.";
+    } else {
+      mensagem = "Essa TV pode entrar na sua lista!";
+    }
+
+    div_frase.innerHTML = mensagem;
+    // div_frase.innerHTML = `${mensagem}`;
+  }
+</script>

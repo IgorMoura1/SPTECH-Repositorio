@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+
+    <style>
+        .textoVermelho{
+            color: red;
+        }
+
+        .textoAzul{
+            color: rgb(0, 162, 255);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class= textoAzul> Banco XPTO</h1> <br> <br>
+    Digite o saldo da sua conta: <br>
+    <input id="saldo_conta"> <br>
+    Digite o valor do débito efetuado: <br>
+    <input id="debito_conta"> <br> <br>
+
+    <button onclick="mostrarCalculo()">
+        Analisar conta
+    </button>
+
+    <div id="aparecerMensagem">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function mostrarCalculo() {
+        var saldo = Number(saldo_conta.value)
+        var debito = Number(debito_conta.value)
+        var saldoFinal = saldo - debito
+
+        if (saldoFinal < 0 ) {
+            aparecerMensagem.innerHTML = `<b class= textoVermelho> o saldo atual da conta corrente é ${saldoFinal}</b>`}
+        else {
+            aparecerMensagem.innerHTML = `<i class= textoAzul> o saldo atual da conta corrente é ${saldoFinal}</i>`}
+
+
+    }
+
+
+</script>

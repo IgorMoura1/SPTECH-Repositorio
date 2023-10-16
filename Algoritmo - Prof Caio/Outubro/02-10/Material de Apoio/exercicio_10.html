@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Início do intervalo: <input id="input_inicio" /><br />
+    Fim do intervalo: <input id="input_fim" /><br />
+    <button onclick="verPares()">S2 Pares</button>
+    <div id="div_pares"></div>
+  </body>
+</html>
+<script>
+  function verPares() {
+    var inicioIntervalo = Number(input_inicio.value);
+    var rodadaFinal = Number(input_fim.value);
+
+    var rodadaAtual = inicioIntervalo;
+
+    div_pares.innerHTML = "";
+    while (rodadaAtual <= rodadaFinal) {
+      if (rodadaAtual % 2 == 0) {
+        div_pares.innerHTML += `${rodadaAtual}<br>`;
+      }
+      rodadaAtual += 1;
+    }
+
+    // div_pares.innerHTML = "";
+    // while (rodadaAtual <= rodadaFinal) {
+    //   var valorEmTexto = rodadaAtual + "";
+    //   var ultimoAlgarismo = valorEmTexto[valorEmTexto.length - 1];
+    //   // 21 -> 1 -> 0.5 || 14 -> 4 -> 2 || 17 -> 7 -> 3.5 || 5 -> 5 -> 2.5
+    //   var divididoPorDois = ultimoAlgarismo / 2 + "";
+
+    //   if (divididoPorDois[1] == ".") {
+    //     rodadaAtual += 1;
+    //   }
+    //   div_pares.innerHTML += `${rodadaAtual}<br>`;
+    //   rodadaAtual += 2;
+    // }
+  }
+</script>

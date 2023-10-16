@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+
+<body>
+    Digite quantos pães franceses você come por dia: <br>
+    <input id="input_pao"> <br> <br>
+    Digite quantos pacotes de bolacha você come por dia: <br>
+    <input id="input_bolacha"> <br> <br>
+    Digite quantos copos de achocolatado você toma por dia: <br>
+    <input id="input_achocolatado"> <br> <br>
+
+    <button onclick="quantasCalorias()">
+        Verificar calorias
+    </button>
+
+    <div id="mostrarResultado">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function quantasCalorias() {
+        var caloriasPao = Number(input_pao.value) * 50
+        var caloriasBol = Number(input_bolacha.value) * 80
+        var caloriasCho = Number(input_achocolatado.value) * 70
+        var caloriasTotal = caloriasPao + caloriasBol + caloriasCho
+
+        if (caloriasTotal < 200) {
+            mostrarResultado.innerHTML = `Parabéns, vai ficar em forma!`
+        }
+        else if (caloriasTotal < 400) {
+            mostrarResultado.innerHTML = `Cuidado, vai ficar menos saudável!`
+        }
+        else {
+            mostrarResultado.innerHTML = "Alerta crítico de saúde!!!";
+        }
+
+    }
+</script>

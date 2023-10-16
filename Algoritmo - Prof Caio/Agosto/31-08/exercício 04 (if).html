@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+
+    <style>
+        .textoVermelho{
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    Insira o valor da Pizza: <br>
+    <input id="vlrPizza"> <br><br>
+    Insira quantidade de amigos: <br>
+    <input id="qtdAmigos"> <br><br>
+
+    <button onclick="mostrarResultado()">
+        Rola a pizza?
+    </button>
+
+    <div id="rolaPizza"></div>
+</body>
+</html>
+
+<script> function mostrarResultado() {
+    var pizza = Number(vlrPizza.value);
+    var amigos = Number(qtdAmigos.value);
+    var vlramigo = pizza / amigos
+    rolaPizza.innerHTML = `
+    Cada amigo vai pagar R$${vlramigo} pela pizza`;
+
+    if (vlramigo > 20 );
+        rolaPizza.innerHTML = `Cada amigo vai pagar R$${vlramigo} pela pizza. <br> <i . class= textoVermelho> Deu ruim! Pizza muito cara! </i>`;
+        }
+</script>

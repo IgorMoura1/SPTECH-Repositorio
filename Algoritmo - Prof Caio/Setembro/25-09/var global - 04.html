@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+
+<body>
+    <img id="imagem" src="https://custom-doodle.com/wp-content/uploads/doodle/simpsons-bart-on-skateboard-pixel/simpsons-bart-on-skateboard-pixel-doodle.gif" style="margin-left: 0"> <br>
+
+    <button onclick="moverEsquerda()">
+        Mover p/ Esquerda
+    </button>
+
+    <button onclick="moverDireita()">
+        Mover p/ Direita
+    </button> 
+    Quantos pixels?
+    <input id="input_pixels">
+</html>
+<script>
+    var marginLeft = 0;
+    function moverEsquerda() {
+        var pixel = Number(input_pixels.value)
+        marginLeft = marginLeft - pixel;
+        imagem.style.marginLeft = `${marginLeft}px`
+    }
+    function moverDireita() {
+        var pixel = Number(input_pixels.value)
+        marginLeft = marginLeft + pixel;
+        imagem.style.marginLeft = `${marginLeft}px`
+    }
+</script>

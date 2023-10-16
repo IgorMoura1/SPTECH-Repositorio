@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+
+<body>
+    Digite a quantidade de elefantes:
+    <input id="qtdElefantes">
+
+    <button onclick="mostrarFrases()">
+        Atazanar a Médium
+    </button>
+
+    <div id="mostrarFrase">
+        
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+    function mostrarFrases() {
+        var elefantes = Number(qtdElefantes.value);
+        var numero = 1;
+        
+        var frase1 = `incomodam`
+        mostrarFrase.innerHTML = ``
+
+        mostrarFrase.innerHTML += `${numero} elefante ${frase1} muita gente<br>`
+        numero += 1
+        while (numero <= elefantes) {
+            mostrarFrase.innerHTML += `${numero} elefantes ${frase1} `
+            var repIncomodam = 1
+            while (repIncomodam < numero) {
+                mostrarFrase.innerHTML += `incomodam `
+                repIncomodam += 1
+                
+            }
+            mostrarFrase.innerHTML += `muito mais <br>`
+            numero +=1
+        }
+    }
+</script>

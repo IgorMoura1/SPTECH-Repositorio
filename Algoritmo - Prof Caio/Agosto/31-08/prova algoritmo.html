@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+    </style>
+    <title>Prova Algoritmo</title>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        Prova Algoritmo!</h1>
+</head>
+
+<body>
+    Digite aqui a quantidade de energia em kWh: <br>
+    <input id="input_kWh" placeholder="25"> <br> <br>
+    Digite aqui a bandeira da tarifa: <br>
+    <input id="input_bandeira" placeholder="Amarela"> <br> <br>
+    Digite aqui o volume de água em litros: <br>
+    <input id="input_agua" placeholder="10"> <br> <br>
+    Digite aqui a quantidade de vazamentos de água: <br>
+    <input id="input_vazaAgua" placeholder="0"> <br> <br>
+    Digite aqui o volume de gás em litros: <br>
+    <input id="input_gas" placeholder="10"> <br> <br>
+    Digite aqui o valor base do plano de internet: <br>
+    <input id="input_internet" placeholder="75"> <br> <br>
+    Indique se há linha telefônica vinculada ao plano de Internet("Sim" ou "Não"): <br>
+    <input id="input_teleInternet" placeholder="Sim ou Não"> <br> <br>
+
+    <button onclick="calcularDespesasFixas()">
+        Calcular Despesas Fixas
+    </button>
+
+    <div id="mostrarResultado">
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function calcularDespesasFixas() {
+        var kWh = Number(input_kWh.value)
+        var bandeira = input_bandeira.value
+        var agua = Number(input_agua.value)
+        var vazaAgua = Number(input_vazaAgua.value)
+        var gas = Number(input_gas.value)
+        var internet = Number(input_internet.value)
+        var teleInternet = input_teleInternet.value
+        var contaLuz = ""
+        var contaAgua = ""
+        var internetPlano = Number(input_internet.value)
+        var internetTotal = ""
+
+        if (bandeira == "Vermelha") {
+            if (kWh <= 50) {
+                kWh = kWh * 1
+                kWh = kWh - (kWh * 0.10)
+                contaLuz = kWh
+            }
+            else kWh = kWh
+            contaLuz = kWh
+        }
+        if (bandeira == "Amarela") {
+            if (kWh <= 50) {
+                kWh = (kWh * 0.90)
+                kWh = kWh - (kWh * 0.10)
+                contaLuz = kWh
+            }
+            else kWh = kWh * 0.90
+            contaLuz = kWh
+        }
+        if (bandeira == "Verde") {
+            if (kWh <= 50) {
+                kWh = (kWh * 0.75)
+                kWh = kWh - (kWh * 0.10)
+                contaLuz = kWh
+            }
+            else kWh = kWh * 0.75
+            contaLuz = kWh
+        }
+        var usokHw = Number(input_kWh.value)
+
+        var agua = agua * 3.5
+        if (vazaAgua > 0) {
+            agua = agua + (vazaAgua * 10)
+        }
+        else { agua = agua }
+        contaAgua = agua
+        var ultAgua = Number(input_agua.value)
+
+
+        var gasTotal = gas * 2.5
+
+        if (teleInternet = "Sim") {
+            var internet = internet + (internet * 0.25)
+            var internetTotal = internet
+        }
+
+        else {teleInternet = "Não" 
+            var internet = Number(input_internet.value)
+            var internetTotal = internet
+        }
+
+        var uso = Number(input_kWh.value)
+
+        var totalContas = contaLuz + contaAgua + gasTotal + internetTotal;
+
+        mostrarResultado.innerHTML = `Com o consumo de ${uso} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${contaLuz}. <br>
+        Com o consumo de ${ultAgua} litros de água contendo ${vazaAgua} vazamentos e a taxa de saneamento, a conta de água totaliza R$ ${contaAgua}. <br>
+        Com o consumo de ${gas} metros cúbicos de gás, a conta de gás totaliza R$ ${gasTotal}. <br>
+        Com um valor base de R$ ${internetPlano} no plano de internet, a conta de internet/telefone totaliza R$ ${internetTotal}. <br>
+        Gasto total de despesas mensal: R$ ${totalContas}.`
+
+    }
+
+
+
+
+
+
+</script>

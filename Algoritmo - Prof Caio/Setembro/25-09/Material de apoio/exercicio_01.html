@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <img id="img_frase" src="https://i.pinimg.com/736x/80/e9/3d/80e93d5b0e470d23d88206f391d1ee87.jpg"
+    style="width: 100px" />
+  <button onclick="aumentarLargura()">Aumentar a largura</button>
+  <button onclick="reduzirLargura()">Reduzir a largura</button>
+</body>
+
+</html>
+<script>
+  var tamanhoAtual = 100;
+  function aumentarLargura() {
+    tamanhoAtual = tamanhoAtual + 10;
+    img_frase.style.width = tamanhoAtual + "px";
+  }
+
+  function reduzirLargura() {
+    tamanhoAtual = tamanhoAtual - 10;
+    img_frase.style.width = tamanhoAtual + "px";
+  }
+</script>

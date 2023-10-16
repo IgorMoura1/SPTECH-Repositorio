@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    Informe o nome do guerreiro: <br>
+    <input type="text" id="input_guerreiro"> <br> <br>
+    Informe o ki normal do guerreiro: <br>
+    <input type="text" id="input_ki"> <br> <br>
+
+    <button onclick="KiGuerreiro()">
+        Ver ki em cada forma
+    </button>
+</body>
+</html>
+<script> function KiGuerreiro() {
+    var nomeguerreiro = input_guerreiro.value
+    var kiguerreiro = input_ki.value
+    alert(`Se o ${nomeguerreiro} estiver na forma Super Sayajin, ele terá ${kiguerreiro * 50} de KI`)
+    alert(`Se o ${nomeguerreiro} estiver na forma Super Sayajin 2, ele terá ${kiguerreiro * 100} de KI`)
+
+
+}
+
+
+</script>

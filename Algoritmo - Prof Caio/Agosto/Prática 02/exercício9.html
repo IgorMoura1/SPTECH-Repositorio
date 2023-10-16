@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    Informe a nota tirou na prova "continuada": <br>
+    <input type="text" id="input_continuada"> <br> <br>
+    Informe a nota tirou na prova "semestral": <br>
+    <input type="text" id="input_semestral"> <br> <br>
+    Informe seu nome: <br>
+    <input type="text" id="input_nome"> <br> <br>
+
+    <button onclick="CalcularMedia()">
+        Calcular média
+    </button>
+</body>
+</html>
+
+<script> function CalcularMedia() {
+var continuada = Number(input_continuada.value)
+var semestral = Number(input_semestral.value)
+var nome = input_nome.value
+    alert(`
+    A média de ${nome} sera de ${continuada * 0.4 + semestral *0.6}`)}
+     </script>

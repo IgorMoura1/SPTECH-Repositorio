@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    Digite o sabor da Pizza: <br>
+    <input id="input_pizza"> <br> <br>
+    Digite o preço da Pizza: <br>
+    <input id="input_preco"> <br> <br>
+    Digite quantos amigos irão comer: <br>
+    <input id="input_amigos"> <br> <br>
+
+    <button onclick="mostrarVlrAmg()">
+        Ver valor por amigo
+    </button>
+
+    <div id="div_pizza">
+
+
+    </div>
+</body>
+</html>
+<script> function mostrarVlrAmg() {
+    var precopizza = Number(input_preco.value)
+    var qntamigos = Number(input_amigos.value)
+    var precopizzagorj = precopizza + precopizza * 0.10
+    var precoporamigo = precopizzagorj / qntamigos 
+    var saborpizza = (input_pizza.value)
+    div_pizza.innerHTML = `
+    Cada amigo vai colaborar com R$${precoporamigo} para a pizza de ${saborpizza}
+    `
+
+
+}
+</script>
+

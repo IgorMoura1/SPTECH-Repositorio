@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+
+<body>
+    Digite aqui a sua meta de economia: <br>
+    <input id="input_economia"> <br> <br>
+    Digite aqui quanto dinheiro tem guardado: <br>
+    <input id="input_guardado"> <br> <br>
+
+    <button onclick="quantoEconomizou()">
+        Analisar economia
+    </button>
+
+    <div id="mostrarResultado">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function quantoEconomizou() {
+        var meta = Number(input_economia.value)
+        var guardado = Number(input_guardado.value)
+        var diferenca = meta - guardado
+        var diferencaPositiva = guardado - meta
+        
+        if (diferenca <= 0) {
+            mostrarResultado.innerHTML = `Parabéns, meta alcançada!`
+            if (diferenca < 0) {
+                mostrarResultado.innerHTML += ` Meta ultrapassada em R$${diferencaPositiva}`
+            }
+        } else {
+            mostrarResultado.innerHTML = `Força! Ainda em busca da meta! Falta R$${diferenca}`
+        }
+    }
+</script>

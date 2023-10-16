@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    Valor economizado:
+    <input id="input_valor_economizado" /><br />
+    <button onclick="verificarPoderCompra()">Poder de compra</button>
+    <span id="span_resultado"></span>
+</body>
+
+</html>
+<script>
+    function verificarPoderCompra() {
+        var valorEconomizado = Number(input_valor_economizado.value);
+
+        if (valorEconomizado > 4000) {
+            span_resultado.innerHTML = `Uma boa moto usada<br>
+            Viagem de ida e volta pra Praia Grande<br>
+            Mais alguma bobagem legal`;
+        } else if (valorEconomizado >= 100) {
+            span_resultado.innerHTML = `Uma boa moto usada<br>
+            Viagem de ida e volta pra Praia Grande`;
+        } else if (valorEconomizado > 0) {
+            span_resultado.innerHTML = `Viagem de ida e volta pra Praia Grande`;
+        } else {
+            span_resultado.innerHTML = `Nada de compras`;
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="atualizarCliques()">Clique em mim</button><br>
+    Cliques: <span id="span_cliques">0</span>
+    <button onclick="mostrarNumeroAtual()">
+      Mostrar número atual
+    </button>
+  </body>
+</html>
+<script>
+  var numero = 0;
+  function atualizarCliques() {
+    numero += 1;
+    span_cliques.innerHTML = numero;
+  }
+
+  function mostrarNumeroAtual() {
+    alert(`O número está em: ${numero}`);
+  }
+</script>

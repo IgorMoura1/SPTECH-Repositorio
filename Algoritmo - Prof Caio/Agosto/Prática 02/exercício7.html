@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7
+    </title>
+</head>
+<body>
+    Digite o valor da passagem: <br>
+    <input type="text" id="input_bilhete"> <br><br>
+    Digite quantas viagens você faz: <br>
+    <input type="text" id="input_viagens"> <br> <br>
+
+    <button onclick="CalcularEconomia()">
+        Ver economia
+        </button>
+</body>
+</html>
+
+<script> 
+    function CalcularEconomia() {
+        var passagem = Number(input_bilhete.value)
+        var viagens = Number(input_viagens.value)
+    alert(`Você economizará R$ ${(passagem * viagens) / 2} por mês `)}
+</script>

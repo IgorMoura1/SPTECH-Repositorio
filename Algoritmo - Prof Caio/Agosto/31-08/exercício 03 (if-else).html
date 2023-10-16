@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+
+    <style>
+        .textoVermelho{
+            color: red;
+        }
+
+        .textoAzul{
+            color: rgb(0, 162, 255);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class= textoAzul> Bom Doce Mercadinho</h1> <br> <br>
+    Digite o quantidade de chocolates comprados: <br>
+    <input id="qtdChocolate"> <br> <br>
+   
+    <button onclick="Compra()">
+        Compra
+    </button>
+
+    <div id="aparecerMensagem">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function Compra() {
+        var chocolates = Number(qtdChocolate.value)
+        var valorChocolate =""
+
+        if (qtdChocolate <= 12 ){
+            valorChocolate = chocolates * 3
+        
+        aparecerMensagem.innerHTML = `o valor da sua compra foi de ${valorChocolate}`}
+        else {valorChocolate = chocolates * 2.50
+            aparecerMensagem.innerHTML = `o valor da sua compra foi de ${valorChocolate}`}
+
+
+        
+        
+    }
+
+
+</script>
